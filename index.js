@@ -1,9 +1,8 @@
 class rlp {
 
 
-    constructor(settings){
+    constructor(settings, pollServer){
         const express = require('express');
-        const pollServer = express();
         const uuid = require('uuid').v4;
         const events = require('events');
         const helmet = require('helmet');
@@ -85,7 +84,6 @@ class rlp {
         })
 
 
-        pollServer.listen(this.port)
     }
 
     on(event, handler){
